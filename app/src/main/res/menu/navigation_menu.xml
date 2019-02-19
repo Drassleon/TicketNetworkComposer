@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_clients"
+        android:icon="@drawable/customer_icon"
+        android:title="@string/navigation_client_title" />
+
+    <item
+        android:id="@+id/navigation_shops"
+        android:icon="@drawable/ticket_shop_icon"
+        android:title="@string/navigation_shop_title" />
+
+    <item
+        android:id="@+id/navigation_tickets"
+        android:icon="@drawable/ticket_icon"
+        android:title="@string/navigation_ticket_title" />
+    <item
+        android:id="@+id/navigation_transactions"
+        android:icon="@drawable/transaction_icon"
+        android:title="@string/navigation_transaction_title" />
+
+</menu>

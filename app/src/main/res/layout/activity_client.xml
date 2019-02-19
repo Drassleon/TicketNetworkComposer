@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewholders.activities.ClientActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblClientId"
+        android:text="Client ID:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lblClientId"
+        android:id="@+id/tvClientId"
+        android:text="Example ID"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblFirstName"
+        android:text="Client First Name:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblClientId"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/lblFirstName"
+        app:layout_constraintTop_toBottomOf="@id/tvClientId"
+        android:id="@+id/tvFirstName"
+        android:text="Example First Name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblLastName"
+        android:text="Client Last Name:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblFirstName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/lblLastName"
+        app:layout_constraintTop_toBottomOf="@id/tvFirstName"
+        android:id="@+id/tvLastName"
+        android:text="Example Last Name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblAddress"
+        android:text="Address:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblLastName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/lblAddress"
+        app:layout_constraintTop_toBottomOf="@id/tvLastName"
+        android:id="@+id/tvAddress"
+        android:text="Example Address"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblIdentificationDoc"
+        android:text="Identification Document:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblAddress"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/lblIdentificationDoc"
+        app:layout_constraintTop_toBottomOf="@id/tvAddress"
+        android:id="@+id/tvIdentificationDoc"
+        android:text="Example ID"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblBirthDate"
+        android:text="Birth Date:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblIdentificationDoc"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/lblBirthDate"
+        app:layout_constraintTop_toBottomOf="@id/tvIdentificationDoc"
+        android:id="@+id/tvBirthDate"
+        android:text="Example BirthDate"/>
+</android.support.constraint.ConstraintLayout>
