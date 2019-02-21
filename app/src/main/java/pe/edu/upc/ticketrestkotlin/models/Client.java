@@ -45,7 +45,7 @@ public class Client {
         bundle.putString("clientId",clientId);
         bundle.putString("firstName",firstName);
         bundle.putString("lastName",lastName);
-        bundle.putBundle("Address",address.toBundle());
+        bundle.putBundle("address",address.toBundle());
         bundle.putString("docType",docType);
         bundle.putString("id",id);
         bundle.putString("birthDate",birthdate.toString());

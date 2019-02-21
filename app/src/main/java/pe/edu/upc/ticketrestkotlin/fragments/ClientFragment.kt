@@ -22,9 +22,9 @@ import retrofit2.Retrofit
 
 class ClientFragment : Fragment() {
     var clients = ArrayList<Client>()
-    lateinit var clientRecyclerView: RecyclerView
+    private lateinit var clientRecyclerView: RecyclerView
     lateinit var clientAdapter: ClientAdapter
-    lateinit var clientLayoutManager: RecyclerView.LayoutManager
+    private lateinit var clientLayoutManager: RecyclerView.LayoutManager
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment

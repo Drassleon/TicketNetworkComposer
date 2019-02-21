@@ -33,7 +33,15 @@ public class Address {
         return bundle;
     }
 
-
+    public Address fromBundle(Bundle bundle){
+        Address aBundle = new Address();
+        aBundle.$class = bundle.getString("$class");
+        aBundle.street = bundle.getString("street");
+        aBundle.city = bundle.getString("city");
+        aBundle.country = bundle.getString("country");
+        aBundle.id = bundle.getString("id");
+        return aBundle;
+    }
     public String get$class() {
         return $class;
     }
