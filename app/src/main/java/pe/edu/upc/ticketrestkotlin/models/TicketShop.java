@@ -19,7 +19,7 @@ public class TicketShop implements Serializable{
     private Address shopAddress;
     @SerializedName("soldTickets")
     @Expose
-    private List<Ticket> soldTickets = null;
+    private List<String> soldTickets = null;
 
     public String get$class() {
         return $class;
@@ -45,11 +45,11 @@ public class TicketShop implements Serializable{
         this.shopAddress = shopAddress;
     }
 
-    public List<Ticket> getSoldTickets() {
+    public List<String> getSoldTickets() {
         return soldTickets;
     }
 
-    public void setSoldTickets(List<Ticket> soldTickets) {
+    public void setSoldTickets(List<String> soldTickets) {
         this.soldTickets = soldTickets;
     }
 

@@ -8,4 +8,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="details_client_id">Client ID</string>
+    <string name="btnTicketDetails">Details</string>
+    <string name="title_activity_ticket">TicketActivity</string>
+    <string name="no_tickets">The Client has no bought Tickets</string>
 </resources>

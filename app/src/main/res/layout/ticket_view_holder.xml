@@ -1,54 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblTicketId"
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:paddingBottom="16dp"
+        android:id="@+id/imgTicketEvent"
+        android:src="@drawable/ticket_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/lblTicketValue"
-        android:text="Ticket ID:"/>
+        app:layout_constraintBottom_toTopOf="@id/tvTicketProfile"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvTicketId"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/lblTicketId"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvTicketValue"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblTicketValue"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/imgTicketEvent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lblTicketId"
-        android:text="Ticket Value:"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvTicketValue"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/lblTicketValue"
-        app:layout_constraintTop_toBottomOf="@id/tvTicketId" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblTicketFestival"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lblTicketValue"
-        android:text="Festival Address:"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvTicketFestival"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/lblTicketFestival"
-        app:layout_constraintTop_toBottomOf="@id/tvTicketValue" />
+        android:id="@+id/tvTicketProfile"/>
 
 </android.support.constraint.ConstraintLayout>

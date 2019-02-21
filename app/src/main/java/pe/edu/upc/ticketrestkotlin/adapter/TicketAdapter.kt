@@ -9,8 +9,6 @@ import pe.edu.upc.ticketrestkotlin.models.Ticket
 class TicketAdapter(var list: List<Ticket>) : RecyclerView.Adapter<TicketViewHolder>() {
     override fun onBindViewHolder(holder: TicketViewHolder, position: Int) {
         holder.idTextView.text = list[position].ticketId
-        holder.festivalTextView.text = list[position].festival.address.street+" - "+list[position].festival.address.city+" - "+list[position].festival.address.country
-        holder.valueTextView.text = list[position].value.toString()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TicketViewHolder {
