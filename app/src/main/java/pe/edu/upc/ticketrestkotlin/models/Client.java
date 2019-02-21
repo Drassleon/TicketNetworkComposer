@@ -4,11 +4,12 @@ import android.os.Bundle;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
-public class Client {
+public class Client implements Serializable{
 
     @SerializedName("$class")
     @Expose
@@ -36,7 +37,7 @@ public class Client {
     private Date birthdate;
     @SerializedName("ticketBought")
     @Expose
-    private List<Ticket> ticketBought = null;
+    private List<String> ticketBought = null;
 
     public Bundle toBundle()
     {
@@ -116,11 +117,11 @@ public class Client {
         this.birthdate = birthdate;
     }
 
-    public List<Ticket> getTicketBought() {
+    public List<String> getTicketBought() {
         return ticketBought;
     }
 
-    public void setTicketBought(List<Ticket> ticketBought) {
+    public void setTicketBought(List<String> ticketBought) {
         this.ticketBought = ticketBought;
     }
 

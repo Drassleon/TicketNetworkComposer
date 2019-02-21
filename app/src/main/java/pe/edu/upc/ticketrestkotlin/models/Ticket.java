@@ -3,7 +3,9 @@ package pe.edu.upc.ticketrestkotlin.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Ticket {
+import java.io.Serializable;
+
+public class Ticket implements Serializable{
 
     @SerializedName("$class")
     @Expose

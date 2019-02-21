@@ -14,7 +14,7 @@ class ClientAdapter(var list: List<Client>) : RecyclerView.Adapter<ClientViewHol
         holder.idTextView.text = list[position].clientId
         holder.profileImageView.setOnClickListener{
             val context = it.context
-            context.startActivity(Intent(context,ClientActivity::class.java).putExtras(list[position].toBundle()))
+            context.startActivity(Intent(context,ClientActivity::class.java).putExtra("client",list[position]))
         }
         /*holder.firstNameTextView.text = list[position].firstName
         holder.lastNameTextView.text = list[position].lastName

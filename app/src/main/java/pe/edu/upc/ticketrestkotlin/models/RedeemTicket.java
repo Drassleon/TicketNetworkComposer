@@ -3,10 +3,11 @@ package pe.edu.upc.ticketrestkotlin.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
-public class RedeemTicket {
+public class RedeemTicket implements Serializable{
 
     @SerializedName("$class")
     @Expose
