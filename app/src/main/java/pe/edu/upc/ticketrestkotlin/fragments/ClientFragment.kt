@@ -7,9 +7,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_client.view.*
-
 import pe.edu.upc.ticketrestkotlin.R
 import pe.edu.upc.ticketrestkotlin.adapter.ClientAdapter
 import pe.edu.upc.ticketrestkotlin.models.Client
@@ -25,6 +25,7 @@ class ClientFragment : Fragment() {
     private lateinit var clientRecyclerView: RecyclerView
     lateinit var clientAdapter: ClientAdapter
     private lateinit var clientLayoutManager: RecyclerView.LayoutManager
+    private lateinit var tvNoClients : TextView
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -32,6 +33,8 @@ class ClientFragment : Fragment() {
         var retrofit : Retrofit = RetrofitRepository().getRetrofitInstance()
 
         var clientRepo : ClientRepository = retrofit.create(ClientRepository::class.java)
+
+        tvNoClients = view.tvNoClients
         clientRecyclerView = view.rvClients
         clientAdapter = ClientAdapter(clients)
         clientLayoutManager = GridLayoutManager(view.context, 2)
@@ -45,6 +48,10 @@ class ClientFragment : Fragment() {
                 clients=response.body() as ArrayList<Client>
                 clientAdapter.list = clients
                 clientAdapter.notifyDataSetChanged()
+                if(clients.isEmpty())
+                {
+                    tvNoClients.visibility = View.VISIBLE
+                }
             }
 
             override fun onFailure(call: Call<List<Client>>, t: Throwable) {

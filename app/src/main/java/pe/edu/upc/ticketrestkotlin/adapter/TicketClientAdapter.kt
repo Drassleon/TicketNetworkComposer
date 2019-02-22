@@ -24,4 +24,4 @@ class TicketClientAdapter(var list: List<Ticket>) : RecyclerView.Adapter<TicketC
     override fun getItemCount(): Int {
         return list.size
     }
-    }
+}

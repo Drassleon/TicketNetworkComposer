@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewholders.activities.TicketShopActivity">
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTicketDetailsTitle"
+            android:text="@string/ticket_shop_details_title"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTicketShopId"
+            android:layout_below="@id/lblTicketDetailsTitle"
+            android:text="Ticket Shop ID:"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/lblTicketShopId"
+            android:layout_below="@id/lblTicketDetailsTitle"
+            android:id="@+id/tvTicketShopId"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTicketShopAddress"
+            android:layout_below="@id/lblTicketShopId"
+            android:text="Ticket Shop Address:"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTicketShopAddress"
+            android:layout_toEndOf="@id/lblTicketShopAddress"
+            android:layout_below="@id/tvTicketShopId"
+            android:layout_marginStart="8dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTitleTicketSold"
+            android:text="@string/tickets_sold_title"
+            android:textStyle="bold"
+            android:textSize="14sp"
+
+            android:layout_below="@id/lblTicketShopAddress"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:id="@+id/rvTicketShopTicket"
+            android:layout_below="@id/lblTitleTicketSold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNoTicketsTicketShop"
+            android:text="@string/no_tickets_ticket_shop"
+            android:layout_below="@id/rvTicketShopTicket"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

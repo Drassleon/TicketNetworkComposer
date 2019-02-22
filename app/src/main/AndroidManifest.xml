@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".viewholders.activities.TicketShopActivity"></activity>
         <activity
             android:name=".viewholders.activities.TicketActivity"
             android:label="@string/title_activity_ticket"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".viewholders.activities.ClientActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

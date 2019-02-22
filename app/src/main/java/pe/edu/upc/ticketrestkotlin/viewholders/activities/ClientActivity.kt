@@ -1,14 +1,13 @@
 package pe.edu.upc.ticketrestkotlin.viewholders.activities
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import pe.edu.upc.ticketrestkotlin.R
-import pe.edu.upc.ticketrestkotlin.adapter.TicketAdapter
 import pe.edu.upc.ticketrestkotlin.adapter.TicketClientAdapter
 import pe.edu.upc.ticketrestkotlin.models.Client
 import pe.edu.upc.ticketrestkotlin.models.Ticket
@@ -73,9 +72,13 @@ class ClientActivity : AppCompatActivity() {
             ticketRecyclerView.adapter = ticketAdapter
             ticketRecyclerView.layoutManager = ticketLayoutManager
         }
-        else
+        if(client.ticketBought.isEmpty())
         {
             tvNoTickets.visibility = View.VISIBLE
+        }
+        else
+        {
+            tvNoTickets.visibility = View.GONE
         }
 
 
@@ -103,7 +106,5 @@ class ClientActivity : AppCompatActivity() {
                 }
             })
         }
-
-
     }
 }

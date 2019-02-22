@@ -11,4 +11,8 @@
     <string name="btnTicketDetails">Details</string>
     <string name="title_activity_ticket">TicketActivity</string>
     <string name="no_tickets">The Client has no bought Tickets</string>
+    <string name="no_clients">No Clients are registered!</string>
+    <string name="no_tickets_ticket_shop">This ticket shop hasn\'t sold any tickets!</string>
+    <string name="tickets_sold_title">Tickets Sold</string>
+    <string name="ticket_shop_details_title">Ticket Shop Details</string>
 </resources>
