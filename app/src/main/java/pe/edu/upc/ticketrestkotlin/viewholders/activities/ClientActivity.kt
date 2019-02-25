@@ -59,7 +59,7 @@ class ClientActivity : AppCompatActivity() {
         tvClientFirstName.text = client.firstName
         tvClientLastName.text = client.lastName
         tvClientAddress.text = client.address.street+"-"+client.address.city+"-"+client.address.country
-        tvClientBirthDate.text = parseBirthDate(client.birthdate.toString())
+        tvClientBirthDate.text = parseBirthDate(client.birthdate)
         tvClientIDoc.text = client.id
 
         if(client.ticketBought!=null)
@@ -84,8 +84,10 @@ class ClientActivity : AppCompatActivity() {
 
     }
     private fun parseBirthDate(unparsed : String) : String{
-        var array = unparsed.split(" ")
-        return array[2]+"/"+array[1]+"/"+array[5]
+
+        var array = unparsed.split("-")
+        var day =array[2].split("T")
+        return array[0]+"-"+array[1]+"-"+day[0]
     }
     private fun parseTickets(unparse: List<String>) {
         var ticket : Ticket

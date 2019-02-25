@@ -15,4 +15,8 @@
     <string name="no_tickets_ticket_shop">This ticket shop hasn\'t sold any tickets!</string>
     <string name="tickets_sold_title">Tickets Sold</string>
     <string name="ticket_shop_details_title">Ticket Shop Details</string>
+    <string name="tickets_bought_title">Tickets Bought</string>
+    <string name="client_details_title">Client Details</string>
+    <string name="create_client_button">Create Client</string>
+    <string name="cancel_button">Cancel</string>
 </resources>

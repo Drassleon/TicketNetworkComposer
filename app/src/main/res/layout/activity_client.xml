@@ -5,18 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".viewholders.activities.ClientActivity">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="8dp"
+        android:text="@string/client_details_title"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblClientDetailsTitle"/>
     <ImageView
         android:id="@+id/imgProfile"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/profile_icon"
         android:layout_marginTop="8dp"
-        android:paddingBottom="8dp"
+        android:paddingBottom="16dp"
         app:layout_constraintBottom_toTopOf="@id/lblClientId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/lblClientDetailsTitle" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -119,19 +128,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="8dp"
+        android:paddingBottom="16dp"
         android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@id/lblBirthDate"
         app:layout_constraintTop_toBottomOf="@id/tvIdentificationDoc"
         android:id="@+id/tvBirthDate"
         android:text="Example BirthDate"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblBirthDate"
+        android:id="@+id/lblTicketClientTitle"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:text="@string/tickets_bought_title"/>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp"
         android:id="@+id/rvTicketClient"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lblBirthDate"
+        app:layout_constraintTop_toBottomOf="@id/lblTicketClientTitle"
         />
     <TextView
         android:layout_width="match_parent"

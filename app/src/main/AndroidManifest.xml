@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".viewholders.activities.TicketShopActivity"></activity>
+        <activity android:name=".viewholders.activities.ClientFormActivity"></activity>
+        <activity android:name=".viewholders.activities.TicketShopActivity" />
         <activity
             android:name=".viewholders.activities.TicketActivity"
             android:label="@string/title_activity_ticket"

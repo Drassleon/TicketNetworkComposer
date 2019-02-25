@@ -5,8 +5,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 public class Client implements Serializable{
@@ -34,7 +32,7 @@ public class Client implements Serializable{
     private String id;
     @SerializedName("birthdate")
     @Expose
-    private Date birthdate;
+    private String birthdate;
     @SerializedName("ticketBought")
     @Expose
     private List<String> ticketBought = null;
@@ -109,11 +107,11 @@ public class Client implements Serializable{
         this.id = id;
     }
 
-    public Date getBirthdate() {
+    public String getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(String birthdate) {
         this.birthdate = birthdate;
     }
 

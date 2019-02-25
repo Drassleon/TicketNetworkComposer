@@ -20,6 +20,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:itemIconTint="@color/colorPrimaryDark"
+        app:itemTextColor="@color/colorPrimary"
         android:id="@+id/bnvFragments"
         app:menu="@menu/navigation_menu"/>
 
