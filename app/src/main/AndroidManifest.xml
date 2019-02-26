@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".viewholders.activities.ClientFormActivity"></activity>
+        <activity android:name=".viewholders.activities.TicketFormActivity"></activity>
+        <activity android:name=".viewholders.activities.TicketShopFormActivity" />
+        <activity android:name=".viewholders.activities.ClientFormActivity" />
         <activity android:name=".viewholders.activities.TicketShopActivity" />
         <activity
             android:name=".viewholders.activities.TicketActivity"
@@ -25,6 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".utils.ExitService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false" />
     </application>
 
 </manifest>

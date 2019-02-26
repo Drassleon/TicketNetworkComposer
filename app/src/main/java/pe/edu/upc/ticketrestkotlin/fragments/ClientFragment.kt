@@ -46,7 +46,6 @@ class ClientFragment : Fragment() {
         clientRecyclerView.adapter = clientAdapter
         clientRecyclerView.layoutManager = clientLayoutManager
 
-        clientAdapter.notifyDataSetChanged()
         val clientListCall : Call<List<Client>> = clientRepo.getClientList()
 
         clientListCall.enqueue(object : Callback<List<Client>> {
@@ -57,7 +56,6 @@ class ClientFragment : Fragment() {
                 if(clients.isEmpty())
                 {
                     tvNoClients.visibility = View.VISIBLE
-                    btnCreateClient.visibility = View.VISIBLE
                 }
             }
 
@@ -65,12 +63,10 @@ class ClientFragment : Fragment() {
                 Toast.makeText(view.context, "Unable to load Client Data", Toast.LENGTH_SHORT).show()
             }
         })
-
         btnCreateClient.setOnClickListener {
             val context = it.context
             context.startActivity(Intent(context,ClientFormActivity::class.java))
         }
-
         return view
     }
 }

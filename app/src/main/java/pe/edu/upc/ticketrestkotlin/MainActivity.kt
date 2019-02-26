@@ -1,5 +1,6 @@
 package pe.edu.upc.ticketrestkotlin
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
@@ -10,9 +11,14 @@ import pe.edu.upc.ticketrestkotlin.fragments.ClientFragment
 import pe.edu.upc.ticketrestkotlin.fragments.TicketFragment
 import pe.edu.upc.ticketrestkotlin.fragments.TicketShopFragment
 import pe.edu.upc.ticketrestkotlin.fragments.TransactionFragment
+import pe.edu.upc.ticketrestkotlin.utils.ExitService
 
 
 class MainActivity : AppCompatActivity() {
+
+    //Testing the LifeCycle Observer
+
+    //private lateinit var appObserver: ArchLyfecycleApp
 
 
     private val bnvFragmentsItemSelectedListener : BottomNavigationView.OnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener {
@@ -50,5 +56,12 @@ class MainActivity : AppCompatActivity() {
 
         bnvFragments.setOnNavigationItemSelectedListener(bnvFragmentsItemSelectedListener)
         bnvFragments.selectedItemId = R.id.navigation_clients
+        val intent = Intent(this, ExitService::class.java)
+        startService(intent)
+        /*ProcessLifecycleOwner.get()
+            .lifecycle
+            .addObserver(
+                ArchLyfecycleApp()
+                    .also { appObserver = it })*/
     }
 }

@@ -3,7 +3,6 @@ package pe.edu.upc.ticketrestkotlin.viewholders.activities
 import android.app.DatePickerDialog
 import android.content.Context
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.TextInputEditText
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableStringBuilder
@@ -92,7 +91,7 @@ class ClientFormActivity : AppCompatActivity() {
 
             clientRepo.postClient(client).enqueue(object: Callback<Client> {
                 override fun onResponse(call: Call<Client>, response: Response<Client>) {
-                    Snackbar.make(it,"Client Created Successfully!",Snackbar.LENGTH_SHORT).show()
+                    Toast.makeText(this@ClientFormActivity,"Client Created Successfully!",Toast.LENGTH_SHORT).show()
                     finish()
                 }
 

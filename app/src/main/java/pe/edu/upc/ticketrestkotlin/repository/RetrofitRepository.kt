@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitRepository{
 
     companion object {
-        private var BASE_URL : String = "http://92dc6613.ngrok.io/api/"
+        private var BASE_URL : String = "http://9621abcc.ngrok.io/api/"
         private lateinit var retrofit : Retrofit
     }
 

@@ -10,7 +10,8 @@
     <string name="details_client_id">Client ID</string>
     <string name="btnTicketDetails">Details</string>
     <string name="title_activity_ticket">TicketActivity</string>
-    <string name="no_tickets">The Client has no bought Tickets</string>
+    <string name="no_tickets_client">The Client has no bought Tickets</string>
+    <string name="no_tickets">No Tickets are registered!</string>
     <string name="no_clients">No Clients are registered!</string>
     <string name="no_tickets_ticket_shop">This ticket shop hasn\'t sold any tickets!</string>
     <string name="tickets_sold_title">Tickets Sold</string>
@@ -19,4 +20,8 @@
     <string name="client_details_title">Client Details</string>
     <string name="create_client_button">Create Client</string>
     <string name="cancel_button">Cancel</string>
+    <string name="create_ticket_button">Create Ticket</string>
+    <string name="no_ticket_shops">No Ticket Shops Registered!</string>
+    <string name="create_shop_btn">Create Shop</string>
+    <string name="ticket_form_title">Ticket Form</string>
 </resources>
