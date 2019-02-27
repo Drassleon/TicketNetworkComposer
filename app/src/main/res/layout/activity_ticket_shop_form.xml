@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewholders.activities.TicketShopFormActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/TicketShopFormTitle"
+        android:text="@string/ticket_form_title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTicketShopIdForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TicketShopFormTitle"
+        android:paddingTop="14dp"
+        android:text="ID:"/>
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/lblTicketShopIdForm"
+        app:layout_constraintTop_toBottomOf="@id/TicketShopFormTitle"
+        android:id="@+id/tiTicketShopIdForm"
+        android:hint="Write the Shop ID"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTicketShopAddressStreetForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblTicketShopIdForm"
+        android:paddingTop="28dp"
+        android:text="Street:"/>
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/lblTicketShopAddressStreetForm"
+        app:layout_constraintTop_toBottomOf="@id/tiTicketShopIdForm"
+        android:id="@+id/tiTicketShopAddressStreetForm"
+        android:hint="Write the Shop Street" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTicketShopAddressCityForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblTicketShopAddressStreetForm"
+        android:paddingTop="26dp"
+        android:text="City:"/>
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/lblTicketShopAddressCityForm"
+        app:layout_constraintTop_toBottomOf="@id/tiTicketShopAddressStreetForm"
+        android:id="@+id/tiTicketShopAddressCityForm"
+        android:hint="Write the Shop City" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTicketShopAddressCountryForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblTicketShopAddressCityForm"
+        android:paddingTop="26dp"
+        android:text="Country:"/>
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/lblTicketShopAddressCountryForm"
+        app:layout_constraintTop_toBottomOf="@id/tiTicketShopAddressCityForm"
+        android:id="@+id/tiTicketShopAddressCountryForm"
+        android:hint="Write the Shop Country" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblTicketShopAddressCountryForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCreateTicketShopCancel"
+        android:id="@+id/btnCreateTicketShopAccept"
+        android:clickable="false"
+        android:text="@string/create_client_button"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblTicketShopAddressCountryForm"
+        app:layout_constraintStart_toEndOf="@id/btnCreateTicketShopAccept"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/btnCreateTicketShopCancel"
+        android:text="@string/cancel_button"/>
+</android.support.constraint.ConstraintLayout>
