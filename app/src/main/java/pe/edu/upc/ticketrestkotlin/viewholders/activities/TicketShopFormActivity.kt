@@ -4,11 +4,15 @@ import android.os.Bundle
 import android.support.design.widget.TextInputEditText
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import android.widget.Toast
 import pe.edu.upc.ticketrestkotlin.R
 import pe.edu.upc.ticketrestkotlin.models.Address
 import pe.edu.upc.ticketrestkotlin.models.TicketShop
 import pe.edu.upc.ticketrestkotlin.repository.RetrofitRepository
-import pe.edu.upc.ticketrestkotlin.repository.TicketRepository
+import pe.edu.upc.ticketrestkotlin.repository.TicketShopRepository
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class TicketShopFormActivity : AppCompatActivity() {
 
@@ -20,7 +24,7 @@ class TicketShopFormActivity : AppCompatActivity() {
     private lateinit var btnCreateShopCancel : Button
 
     private var retrofit = RetrofitRepository().getRetrofitInstance()
-    private var ticketRepo : TicketRepository = retrofit.create(TicketRepository::class.java)
+    private var shopRepo : TicketShopRepository = retrofit.create(TicketShopRepository::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +52,16 @@ class TicketShopFormActivity : AppCompatActivity() {
 
             shop.soldTickets = soldTickets
 
+            shopRepo.postShop(shop).enqueue(object: Callback<TicketShop>{
+                override fun onResponse(call: Call<TicketShop>, response: Response<TicketShop>) {
+                    Toast.makeText(this@TicketShopFormActivity,"Ticket Shop created successfully!",Toast.LENGTH_SHORT).show()
+                    finish()
+                }
+
+                override fun onFailure(call: Call<TicketShop>, t: Throwable) {
+                    Toast.makeText(this@TicketShopFormActivity,"Ticket Shop could not be created!",Toast.LENGTH_SHORT).show()
+                }
+            })
         }
         btnCreateShopCancel.setOnClickListener {
             finish()
