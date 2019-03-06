@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,7 +51,10 @@ class ClientFragment : Fragment() {
 
         clientListCall.enqueue(object : Callback<List<Client>> {
             override fun onResponse(call: Call<List<Client>>, response: Response<List<Client>>) {
-                tvNoClients.visibility = View.GONE
+                if(tvNoClients.visibility==View.GONE)
+                {
+                    tvNoClients.visibility = View.GONE
+                }
                 clients=response.body() as ArrayList<Client>
                 clientAdapter.list = clients
                 clientAdapter.notifyDataSetChanged()
@@ -63,6 +67,7 @@ class ClientFragment : Fragment() {
             override fun onFailure(call: Call<List<Client>>, t: Throwable) {
                 Toast.makeText(view.context, "Unable to load Client Data", Toast.LENGTH_SHORT).show()
                 tvNoClients.visibility = View.VISIBLE
+                Log.d("API ERROR",t.toString())
             }
         })
         btnCreateClient.setOnClickListener {
