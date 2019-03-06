@@ -56,6 +56,7 @@ class TicketFragment : Fragment() {
 
         clientListCall.enqueue(object : Callback<List<Ticket>> {
             override fun onResponse(call: Call<List<Ticket>>, response: Response<List<Ticket>>) {
+                lblNoTickets.visibility = View.GONE
                 tickets=response.body() as ArrayList<Ticket>
                 ticketAdapter.list = tickets
                 ticketAdapter.notifyDataSetChanged()
@@ -66,6 +67,7 @@ class TicketFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<List<Ticket>>, t: Throwable) {
+                lblNoTickets.visibility = View.VISIBLE
                 Toast.makeText(view.context, "Unable to load Client Data", Toast.LENGTH_SHORT).show()
             }
         })

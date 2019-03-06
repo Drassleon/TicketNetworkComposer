@@ -52,6 +52,7 @@ class TicketShopFragment : Fragment() {
 
         ticketShopCall.enqueue(object: Callback<List<TicketShop>> {
             override fun onResponse(call: Call<List<TicketShop>>, response: Response<List<TicketShop>>) {
+                lblNoShops.visibility = View.GONE
                 shops=response.body() as ArrayList<TicketShop>
                 ticketShopAdapter.list=shops
                 ticketShopAdapter.notifyDataSetChanged()
@@ -62,6 +63,7 @@ class TicketShopFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<List<TicketShop>>, t: Throwable) {
+                lblNoShops.visibility = View.VISIBLE
                 Toast.makeText(view.context, "Unable to load Ticket Shop Data", Toast.LENGTH_SHORT).show()
             }
         })
