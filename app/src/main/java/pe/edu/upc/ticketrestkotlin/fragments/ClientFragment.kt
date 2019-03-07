@@ -43,20 +43,19 @@ class ClientFragment : Fragment() {
         clientRecyclerView = view.rvClients
         btnCreateClient = view.btnCreateClient
         clientAdapter = ClientAdapter(clients)
-        clientLayoutManager = GridLayoutManager(view.context, 2)
+        clientLayoutManager = GridLayoutManager(this.context,2)
         clientRecyclerView.adapter = clientAdapter
         clientRecyclerView.layoutManager = clientLayoutManager
+        clientAdapter.notifyDataSetChanged()
 
         val clientListCall : Call<List<Client>> = clientRepo.getClientList()
 
         clientListCall.enqueue(object : Callback<List<Client>> {
             override fun onResponse(call: Call<List<Client>>, response: Response<List<Client>>) {
-                if(tvNoClients.visibility==View.GONE)
-                {
-                    tvNoClients.visibility = View.GONE
-                }
-                clients=response.body() as ArrayList<Client>
+                clients = response.body() as ArrayList<Client>
+
                 clientAdapter.list = clients
+
                 clientAdapter.notifyDataSetChanged()
                 if(clients.isEmpty())
                 {
@@ -67,6 +66,7 @@ class ClientFragment : Fragment() {
             override fun onFailure(call: Call<List<Client>>, t: Throwable) {
                 Toast.makeText(view.context, "Unable to load Client Data", Toast.LENGTH_SHORT).show()
                 tvNoClients.visibility = View.VISIBLE
+                clientAdapter.notifyDataSetChanged()
                 Log.d("API ERROR",t.toString())
             }
         })

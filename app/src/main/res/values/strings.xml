@@ -24,4 +24,5 @@
     <string name="no_ticket_shops">No Ticket Shops Registered!</string>
     <string name="create_shop_btn">Create Shop</string>
     <string name="ticket_form_title">Ticket Form</string>
+    <string name="create_ticket_shop_button">Create Shop</string>
 </resources>

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="600dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.TicketFragment">
     <android.support.constraint.ConstraintLayout
@@ -13,6 +13,7 @@
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="16dp"
             android:id="@+id/rvTicket"/>
         <TextView
@@ -27,10 +28,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/lblNoTickets"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:paddingBottom="16dp"
             android:id="@+id/btnCreateTicket"
             android:text="@string/create_ticket_button"/>
     </android.support.constraint.ConstraintLayout>
